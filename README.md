@@ -18,6 +18,12 @@ or using NPM:
 $ npm install --save gems-sdk
 ```
 
+or using latest GitHub:
+
+```bash
+$ npm install --save dotGems/gems-sdk
+```
+
 ## Quick Start
 
 ```js
