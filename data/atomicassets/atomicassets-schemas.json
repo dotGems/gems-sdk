@@ -1,0 +1,35 @@
+{
+  "rows": [{
+      "schema_name": "merijnworks1",
+      "format": [{
+          "name": "name",
+          "type": "string"
+        },{
+          "name": "img",
+          "type": "image"
+        },{
+          "name": "artist",
+          "type": "string"
+        },{
+          "name": "about",
+          "type": "string"
+        },{
+          "name": "type",
+          "type": "string"
+        },{
+          "name": "drop",
+          "type": "string"
+        },{
+          "name": "website",
+          "type": "string"
+        },{
+          "name": "video",
+          "type": "ipfs"
+        }
+      ]
+    }
+  ],
+  "more": false,
+  "next_key": "",
+  "next_key_bytes": ""
+}

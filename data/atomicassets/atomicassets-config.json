@@ -1,0 +1,30 @@
+{
+  "rows": [{
+      "asset_counter": "2199023513808",
+      "template_counter": 2715,
+      "offer_counter": 128768,
+      "collection_format": [{
+          "name": "name",
+          "type": "string"
+        },{
+          "name": "img",
+          "type": "ipfs"
+        },{
+          "name": "description",
+          "type": "string"
+        },{
+          "name": "url",
+          "type": "string"
+        }
+      ],
+      "supported_tokens": [{
+          "sym": "4,EOS",
+          "contract": "eosio.token"
+        }
+      ]
+    }
+  ],
+  "more": false,
+  "next_key": "",
+  "next_key_bytes": ""
+}
