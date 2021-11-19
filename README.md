@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/dotGems/gems-sdk.svg?branch=master)](https://travis-ci.org/dotGems/gems-sdk)
 [![npm version](https://badge.fury.io/js/gems-sdk.svg)](https://badge.fury.io/js/gems-sdk)
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/dotGems/gems-sdk/master/LICENSE)
+[![MIT licensed](https://img.shields.io/badge/license-GNU-blue.svg)](https://raw.githubusercontent.com/dotGems/gems-sdk/master/LICENSE)
 
 ## Install
 
