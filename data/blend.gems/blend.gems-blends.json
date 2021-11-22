@@ -1,0 +1,18 @@
+{
+  "rows": [{
+      "id": {
+        "collection_name": "memewarsreal",
+        "template_id": 1614
+      },
+      "recipe_ids": [
+        0
+      ],
+      "description": "Memes",
+      "start_time": "2021-11-21T23:13:16",
+      "end_time": "1970-01-01T00:00:00"
+    }
+  ],
+  "more": false,
+  "next_key": "",
+  "next_key_bytes": ""
+}
