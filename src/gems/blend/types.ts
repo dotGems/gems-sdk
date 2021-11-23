@@ -14,7 +14,7 @@ export interface Status {
     last_updated: Date;
 }
 
-export interface Scopes {
+export interface Collections {
     collection_name: string[];
 }
 

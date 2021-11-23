@@ -1,5 +1,5 @@
 import { get_table_rows } from "../../helpers"
-import { Blends, Status, Recipes, Scopes } from "./types"
+import { Blends, Status, Recipes, Collections } from "./types"
 import { CODE } from "./code"
 
 export async function get_blends( collection_name: string, template_id?: number ): Promise<Blends[]> {
@@ -27,10 +27,10 @@ export async function get_status( ): Promise<Status[]> {
     return get_table_rows(code, scope, table);
 }
 
-export async function get_scopes( ): Promise<Scopes[]> {
+export async function get_collections( ): Promise<Collections[]> {
     const code = CODE;
     const scope = CODE;
-    const table = "scopes";
+    const table = "collections";
     return get_table_rows(code, scope, table);
 }
 
