@@ -15,7 +15,7 @@ export interface Status {
 }
 
 export interface Collections {
-    collection_name: string[];
+    collection_names: string[];
 }
 
 export interface Recipes {

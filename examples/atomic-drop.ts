@@ -1,29 +1,28 @@
-import { get_collections, get_config, get_schemas, get_templates } from "../src/atomicassets"
-import { get_drops } from "../src/atomicdropsx"
+import * as gems from ".."
 import { deserialize, ObjectSchema } from "atomicassets"
 
 async function main(drop_id: number) {
     // 0. Get config // can hardcode values
-    const config = (await get_config())[0];
+    const config = (await gems.atomic.assets.get_config())[0];
 
     // 1. Get Drop details
-    const drop = (await get_drops(drop_id))[0];
+    const drop = (await gems.atomic.drops.get_drops(drop_id))[0];
     const collection_name = drop.collection_name
     const template_id = drop.assets_to_mint[0].template_id // could have multiples (but not common)
     console.log(drop);
 
     // 2. Get Collection details
-    const collections = (await get_collections( collection_name ))[0];
+    const collections = (await gems.atomic.assets.get_collections( collection_name ))[0];
     const description = deserialize(new Uint8Array(collections.serialized_data), ObjectSchema( config.collection_format ) );
     console.log(description);
 
     // 3. Get Template IDs details
-    const templates = await get_templates( collection_name, template_id );
+    const templates = await gems.atomic.assets.get_templates( collection_name, template_id );
     const { schema_name, immutable_serialized_data } = templates[0];
     console.log(templates[0]);
 
     // 4. Get Schemas
-    const schemas = await get_schemas( collection_name, schema_name );
+    const schemas = await gems.atomic.assets.get_schemas( collection_name, schema_name );
     const { format } = schemas[0];
 
     // Deserialize Immutable

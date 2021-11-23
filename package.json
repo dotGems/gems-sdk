@@ -9,7 +9,6 @@
   ],
   "scripts": {
     "build": "tsc",
-    "prepare": "tsc",
     "prepublishOnly": "npm run test && npm run build",
     "test": "jest --coverage __tests__/**.test.ts"
   },

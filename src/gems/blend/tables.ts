@@ -20,18 +20,18 @@ export async function get_recipes( collection_name: string, id?: number ): Promi
     return get_table_rows(code, scope, table, { lower_bound, upper_bound } );
 }
 
-export async function get_status( ): Promise<Status[]> {
+export async function get_status( ): Promise<Status> {
     const code = CODE;
     const scope = CODE;
     const table = "status";
-    return get_table_rows(code, scope, table);
+    return (await get_table_rows<Status>(code, scope, table))[0];
 }
 
-export async function get_collections( ): Promise<Collections[]> {
+export async function get_collections( ): Promise<string[]> {
     const code = CODE;
     const scope = CODE;
     const table = "collections";
-    return get_table_rows(code, scope, table);
+    return (await get_table_rows<Collections>(code, scope, table))[0].collection_names;
 }
 
 // (async () => {

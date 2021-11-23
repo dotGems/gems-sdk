@@ -21,7 +21,7 @@ test("gems.blend.get_status #1 (pass)", async () => {
   expect( results ).toBeTruthy;
 });
 
-test("gems.blend.get_scopes #1 (pass)", async () => {
-  const results = await gems.blend.get_scopes();
+test("gems.blend.get_collections #1 (pass)", async () => {
+  const results = await gems.blend.get_collections();
   expect( results ).toBeTruthy;
 });
