@@ -2,11 +2,11 @@ import { get_table_rows } from "../../helpers"
 import { Config, Collections, Schemas, Templates } from "./types"
 import { CODE } from "./code";
 
-export async function get_config(): Promise<Config[]> {
+export async function get_config(): Promise<Config> {
     const code = CODE;
     const scope = CODE;
     const table = "config";
-    return get_table_rows( code, scope, table );
+    return (await get_table_rows<Config>( code, scope, table ))[0];
 }
 
 export async function get_schemas( collection_name: string, schema_name: string ): Promise<Schemas[]> {
