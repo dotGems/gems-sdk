@@ -1,6 +1,6 @@
 # .gems Javascript SDK
 
-[![Build Status](https://travis-ci.org/dotGems/gems-sdk.svg?branch=master)](https://travis-ci.org/dotGems/gems-sdk)
+[![Build Status](https://github.com/dotGems/gems-sdk/actions/workflows/test.yml/badge.svg)](https://github.com/dotGems/gems-sdk/actions/workflows/test.yml)
 [![npm version](https://badge.fury.io/js/gems-sdk.svg)](https://badge.fury.io/js/gems-sdk)
 [![MIT licensed](https://img.shields.io/badge/license-GNU-blue.svg)](https://raw.githubusercontent.com/dotGems/gems-sdk/master/LICENSE)
 
