@@ -17,3 +17,8 @@ export async function get_table_rows<T = any>( code: string, scope: string|numbe
     }
     return [];
 }
+
+export function toISOString( date?: Date ) {
+    if ( !date ) return "";
+    return date.toISOString().split(".")[0];
+}
