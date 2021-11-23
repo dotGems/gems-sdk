@@ -31,7 +31,7 @@ import * as gems from "gems-sdk"
 
 // Round Computations
 const drop_id = 81;
-const drop = (await gems.atomicdropsx.get_drops(drop_id))[0]
+const drop = (await gems.drops.get_drops(drop_id))[0]
 
 // drop =>
 {
