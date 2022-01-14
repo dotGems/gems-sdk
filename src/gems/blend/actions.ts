@@ -20,10 +20,19 @@ export async function delrecipe( id: { collection_name: string, template_id: num
     }
 }
 
-export async function setblend( id: { collection_name: string, template_id: number }, description?: string, start_time?: Date, end_time?: Date ) {
+export async function cancel( owner: string, id: { collection_name: string, template_id: number } ) {
+    return {
+        owner,
+        id,
+    }
+}
+
+export async function setblend( id: { collection_name: string, template_id: number }, description?: string, plugin?: string, quantity?: {contract: string, quantity: string}, start_time?: Date, end_time?: Date ) {
     return {
         id,
         description,
+        plugin,
+        quantity,
         start_time: toISOString(start_time),
         end_time: toISOString(end_time),
     }

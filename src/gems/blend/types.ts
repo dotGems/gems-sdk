@@ -5,6 +5,11 @@ export interface Blends {
     };
     recipe_ids: number[];
     description: string;
+    plugin: string;
+    quantity: {
+        contract: string;
+        quantity: string;
+    };
     start_time: Date;
     end_time: Date;
 }
