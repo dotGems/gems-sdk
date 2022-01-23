@@ -6,13 +6,12 @@
 
 ## Overview
 
-- EOSJS RPC calls
+- EOSIO RPC calls
 - Typescript Interfaces/Types
 - EOSIO Smart Contract
   - tables
   - actions
   - code
-
 
 ## Install
 
@@ -37,28 +36,33 @@ $ npm install --save dotGems/gems-sdk
 ## Quick Start
 
 ```js
-import * as gems from "gems-sdk"
+import * as sdk from "gems-sdk"
 
-// Round Computations
-const drop_id = 81;
-const drop = (await gems.drops.get_drops(drop_id))[0]
+(async () => {
+  // Get .gems blends
+  const collection_name = "memewarsreal";
+  const blends = await sdk.gems.blend.get_blends(collection_name);
+  console.log(blends);
 
-// drop =>
-{
-  drop_id: 81,
-  collection_name: 'merijn.gems',
-  assets_to_mint: [ { template_id: 2420, tokens_to_back: [] } ],
-  listing_price: '10.0000 EOS',
-  settlement_symbol: '4,EOS',
-  price_recipient: 'merijn.gems',
-  fee_rate: '0.02000000000000000',
-  auth_required: 0,
-  account_limit: 0,
-  account_limit_cooldown: 0,
-  max_claimable: 21,
-  current_claimed: 21,
-  start_time: 1634486400,
-  end_time: 0,
-  display_data: ''
-}
+  // Get .gems blend recipes
+  const recipes = await sdk.gems.blend.get_recipes(collection_name);
+  console.log(recipes);
+
+  // Get AtomicDrops
+  const drop_id = 81;
+  const drop = await sdk.atomic.drops.get_drop(drop_id);
+  console.log(drop);
+})()
+```
+
+## Configure
+
+```js
+import * as sdk from "gems-sdk"
+
+// change EOSIO endpoint
+sdk.config({endpoint: "https://eos.eosn.io"});
+
+// change particular smart contract
+sdk.gems.blend.config({code: "d.blend.gems"});
 ```

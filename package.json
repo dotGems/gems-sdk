@@ -1,6 +1,6 @@
 {
   "name": "gems-sdk",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": ".gems SDK",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -20,16 +20,16 @@
   "license": "GNU",
   "homepage": "https://github.com/dotGems/gems-sdk",
   "dependencies": {
-    "atomicassets": "^1.4.2",
-    "eosjs": "^22.1.0",
-    "isomorphic-fetch": "^3.0.0"
+    "isomorphic-fetch": "3.x"
   },
   "devDependencies": {
-    "@types/jest": "^27.0.2",
-    "@types/isomorphic-fetch": "^0.0.35",
-    "@types/node": "^16.11.7",
-    "jest": "^27.3.1",
-    "ts-jest": "^27.0.7",
-    "typescript": "^4.4.4"
+    "@types/isomorphic-fetch": "*",
+    "@types/jest": "*",
+    "@types/node": "*",
+    "atomicassets": "*",
+    "jest": "*",
+    "node-fetch": "*",
+    "ts-jest": "*",
+    "typescript": "*"
   }
 }

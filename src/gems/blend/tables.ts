@@ -11,12 +11,12 @@ export async function get_blends( collection_name: string, template_id?: number 
     return get_table_rows(code, scope, table, { lower_bound, upper_bound });
 }
 
-export async function get_recipes( collection_name: string, id?: number ): Promise<Recipes[]> {
+export async function get_recipes( collection_name: string, recipe_id?: number ): Promise<Recipes[]> {
     const code = CODE;
     const scope = collection_name;
     const table = "recipes";
-    const lower_bound = id;
-    const upper_bound = id;
+    const lower_bound = recipe_id;
+    const upper_bound = recipe_id;
     return get_table_rows(code, scope, table, { lower_bound, upper_bound } );
 }
 

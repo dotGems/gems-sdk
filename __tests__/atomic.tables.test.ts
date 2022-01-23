@@ -1,23 +1,26 @@
-import * as gems from "..";
+import * as sdk from "..";
 
 // Atomic Drops
 test("atomic.drops.get_drops #1 (pass)", async () => {
-  const results = await gems.drops.get_drops(81)
-  expect( results ).toBeTruthy;
+  const results1 = await sdk.atomic.drops.get_drops([81, 83])
+  expect( results1 ).toBeTruthy;
+
+  const results2 = await sdk.atomic.drops.get_drop(81)
+  expect( results2 ).toBeTruthy;
 });
 
 // Atomic Assets
 test("atomic.assets.get_collections #1 (pass)", async () => {
-  const results = await gems.assets.get_collections("merijn.gems")
+  const results = await sdk.atomic.assets.get_collections("merijn.gems")
   expect( results.length ).toBeTruthy;
 });
 
 test("atomic.assets.templates #1 (pass)", async () => {
-  const results = await gems.assets.get_templates("merijn.gems", 2420)
+  const results = await sdk.atomic.assets.get_templates("merijn.gems", 2420)
   expect( results.length ).toBeTruthy;
 });
 
 test("atomic.assets.schemas #1 (pass)", async () => {
-  const results = await gems.assets.get_schemas("merijn.gems", "merijnworks1")
+  const results = await sdk.atomic.assets.get_schemas("merijn.gems", "merijnworks1")
   expect( results.length ).toBeTruthy;
 });
